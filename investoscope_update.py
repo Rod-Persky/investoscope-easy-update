@@ -85,8 +85,8 @@ def tidy_yahoo_csv(csv_data):
   csv_text = []
   csv_data = csv.reader(csv_data.split('\n'))
   for row in csv_data:
-    # Ignore row with null values
-    if "null" in row or len(row) == 0:
+    # Ignore row with null values or is empty
+    if "null" in row or not row:
       continue
 
     # Remove Adj Close
@@ -193,8 +193,8 @@ def main():
         load_into_investoscope(item, csv_text)
         status = update_item_status(item, status)
         save_state(status)
-    except:
-      print("Unexpected error:", sys.exc_info()[0])
+    except KeyError:
+      print("Unable to get information for", item['name'], '('+item['code']+')')
 
 
   print("done!")
