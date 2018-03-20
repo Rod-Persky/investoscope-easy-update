@@ -1,50 +1,37 @@
 # Investoscope Easy Update
 
 Updates [Investoscope 3](http://www.investoscope.com/) end of day quotes from
-different data sources than Yahoo or Google.
+different data sources than Yahoo, Google and some other places.
 
-Right now it supports [Yahoo](http://www.yahoo.com/) as a data source and
-it shouldn't bee too much work extending it to other local data sources which may
-be updated faster after the local market closes than Yahoo and Google does.
-
-It updates Investoscope by importing CSV in to Investoscope via Applescript.
-
-Thanks to the founder of Investoscope Morten Fjord-Larsen who gave me a clue on how to express the Applescript and Thorbjørn Hermansen who made this in node.js.
-
+Primarily it supports [Yahoo](http://www.yahoo.com/) as a data source and
+it shouldn't be too much work extending it to other local data sources which may
+be updated faster after the local market closes than Yahoo does.
 
 ## Supported markets
 
 * Most - via yahoo.com
 
+## Installation
+
+1) Download this repository as a zip file
+2) Extract Investoscope Updater.app to a convienient place
+
 ## Usage
 
-### Preparation in Investoscope
+Open Investoscope Updater! That's it
 
-When we update end of day quotes with this script we'll read quotes from
-Investoscope's database and we try to update all stocks which have data in
-the symbol field.
+## Common Issues
 
-### First time install
+The output will show any issue that has occrred giving a few seconds before
+disappearing. You may wish to read the output to diagnose what happened, otherwise
+simply open a git issue.
 
-```bash
-# Clone
-git clone https://github.com/Rod-Persky/investoscope-easy-update.git
-cd investoscope-easy-update
+You will need python 3 installed, you should do this using either homebrew or
+the official python installer. 
 
-# edit the script (investoscope_update.py) and edit so that
-# INVESTOSCOPE_PATH = "~/.investoscope"
-# points to Investoscope's data folder. The data folder may be
-# changed in Investoscope's preferences, under the advanced tab.
+The method is totally against all TOSs for these services, however the method
+emulates you manually browsing to these sites -- we also are extremely concientious
+about the data requests and download minimal data. These providers are within their
+best interests to impliment anti-botting measures therefore I must stress that
+*THERE IS NO WAY I CAN GUARENTEE THAT THE DATA IS ACCURATE*.
 
-```
-
-#### Debug information
-No debug information is output, for some instruments (bonds) the script
-will output a type error because you may not be able to download its
-historic data. This will happen every time the script runs, but it will
-continue without any problems.
-
-### To update Investoscope's quotes
-```bash
-python3 investoscope_update.py
-```
