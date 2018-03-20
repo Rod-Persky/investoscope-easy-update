@@ -15,10 +15,11 @@ be updated faster after the local market closes than Yahoo does.
 
 1) Download this repository as a zip file
 2) Extract Investoscope Updater.app to a convienient place
+3) control click and open app and authorise the app
 
 ## Usage
 
-Open Investoscope Updater! That's it
+1) Open Investoscope Updater! That's it
 
 ## Common Issues
 
@@ -28,6 +29,10 @@ simply open a git issue.
 
 You will need python 3 installed, you should do this using either homebrew or
 the official python installer. 
+
+I will do not know how to code sign this app, you will have to enable the use of
+apps from 'unknown' developers. The first time you open the app you will need to
+control + click and select open from the menu.
 
 The method is totally against all TOSs for these services, however the method
 emulates you manually browsing to these sites -- we also are extremely concientious
