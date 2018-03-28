@@ -1,11 +1,7 @@
 # Investoscope Easy Update
 
-Updates [Investoscope 3](http://www.investoscope.com/) end of day quotes from
-different data sources than Yahoo, Google and some other places.
-
-Primarily it supports [Yahoo](http://www.yahoo.com/) as a data source and
-it shouldn't be too much work extending it to other local data sources which may
-be updated faster after the local market closes than Yahoo does.
+Primarily Investoscope Easy Update supports [Yahoo](http://www.yahoo.com/) as a data source and
+it shouldn't be too much work extending it to other data sources that include more complex instruments.
 
 ## Supported markets
 
@@ -13,9 +9,11 @@ be updated faster after the local market closes than Yahoo does.
 
 ## Installation
 
-1) Download this repository as a zip file
-2) Extract Investoscope Updater.app to a convienient place
-3) control click and open app and authorise the app
+1) Install python 3
+2) Install python requests module `pip3 install requests`
+3) Download this repository as a zip file
+4) Extract Investoscope Updater.app to a convienient place
+5) control click and open app and authorise the app
 
 ## Usage
 
