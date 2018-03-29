@@ -1,4 +1,5 @@
 import time
+from datetime import date
 import pickle
 import copy
 
@@ -45,9 +46,9 @@ def get_quote(item):
 def check_item_outdated(item, status):
   """ Check if the item is outdated """
   if item['code'] in status:
-    state = status[item['code']]
-    # If item is older than 1 day (86400 seconds), then update
-    if state < (int(time.time())-86400):
+    # Update when the weekday has changed
+    last_update = date.fromtimestamp(status[item['code']])
+    if last_update.weekday() is not date.today().weekday():
       return True
     else:
       return False
