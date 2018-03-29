@@ -85,7 +85,7 @@ def main():
         save_state(status)
       else:
         print("up to date:", item['code'], item['name'])
-    except KeyError:
+    except:
       print("Unable to get information for", item['name'], '('+item['code']+')')
 
     progress['complete'] += 1
