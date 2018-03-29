@@ -38,3 +38,7 @@ about the data requests and download minimal data. These providers are within th
 best interests to impliment anti-botting measures therefore I must stress that
 *THERE IS NO WAY I CAN GUARENTEE THAT THE DATA IS ACCURATE*.
 
+## Data Accuracy
+
+1) Yahoo data for LSE is mixed in GBP and GBp. So this means that any reports done in Investoscope including those instruments are out by a factor of 100 for those instruments! This appears to be a known issue, with comments from November indicating Yahoo would look into it.
+
