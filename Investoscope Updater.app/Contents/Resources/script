@@ -19,3 +19,5 @@ if hash $PYTHON 2>/dev/null; then
 else
     echo "ALERT:Error|You don't have python3 in folder /usr/local/bin!"
 fi
+
+sleep 3

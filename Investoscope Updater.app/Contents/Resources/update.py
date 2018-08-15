@@ -30,11 +30,18 @@ def get_quote(item):
   while provider_idx < len(providers):
     provider = providers[provider_idx]
     try:
-      data = provider.gen_historical_data_csv(item)
+      # Permit the update scripts to modify the item
+      item_copy = copy.deepcopy(item)
+      data = provider.gen_historical_data_csv(item_copy)
 
     # Errors associated with other non-specific problems
     except IndexError:
       pass
+
+    except Exception as ex:
+      template = "An exception of type {0} occurred. Arguments:\n{1!r}"
+      message = template.format(type(ex).__name__, ex.args)
+      print(message)
     
     if data is not None:
       return data

@@ -100,8 +100,14 @@ def ticker_known(ticker):
   if 'itemCount' in data and data['itemCount'] == 0:
     return None
 
+  # Get max score
+  max_score = max([item['score'] for item in data['items'][:]])
+
+  if max_score == 0:
+    return None
+
   # Exact match is a score of 1000
-  if data['items'][0]['score'] != 1000:
+  if data['items'][0]['score'] != max_score:
     return None
 
   return ticker
