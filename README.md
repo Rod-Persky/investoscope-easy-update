@@ -21,22 +21,25 @@ it shouldn't be too much work extending it to other data sources that include mo
 
 ## Common Issues
 
-The output will show any issue that has occrred giving a few seconds before
+The output will show any issue that has ocurred giving a few seconds before
 disappearing. You may wish to read the output to diagnose what happened, otherwise
-simply open a git issue.
+simply open a git issue. If you do wish to debug, the main entry point is update.py
+in the Resources folder which can be run from terminal.
 
-You will need python 3 installed, you should do this using either homebrew or
+You will need python 3 installed, you should do this using homebrew or
 the official python installer. 
 
-I will do not know how to code sign this app, you will have to enable the use of
-apps from 'unknown' developers. The first time you open the app you will need to
-control + click and select open from the menu.
+**On first run the app you will need to control + click and select open from the menu**.
+This is due to app not being codesigned. Whilst opening first time without this would
+be ideal, it really isn't a problem as all subsequent launches will not exhibit this
+problem. The value of a dev licence / codesigning to improve this is truely marginal,
+however don't let this stop you gifting a licence / certificate for this project.
 
 The method is totally against all TOSs for these services, however the method
 emulates you manually browsing to these sites -- we also are extremely concientious
 about the data requests and download minimal data. These providers are within their
-best interests to impliment anti-botting measures therefore I must stress that
-*THERE IS NO WAY I CAN GUARENTEE THAT THE DATA IS ACCURATE*.
+best interests to impliment measures that prevent the program from working
+therefore I must stress that **THERE IS NO WAY I CAN CERTIFY THAT THE DATA IS ACCURATE**.
 
 ## Data Accuracy
 
