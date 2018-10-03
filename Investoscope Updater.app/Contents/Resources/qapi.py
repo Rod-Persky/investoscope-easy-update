@@ -121,7 +121,7 @@ def gen_historical_data_csv(ticker):
   CSV_DATA = ["Date,Open,High,Low,Close,Volume"]
   data = get_ticks(ticker['code'])
 
-  for idx in range(0,len(data['close'])-1):
+  for idx in range(0,len(data['close'])):
     CSV_DATA.append(
       ",".join(
         [
