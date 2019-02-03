@@ -78,7 +78,7 @@ def convert_json_to_csv(item, json_data):
   except:
     return None
 
-  for idx in range(0,len(data['close'])-1):
+  for idx in range(0,len(data['close'])):
     date = datetime.fromtimestamp(times[idx]).strftime('%Y-%m-%d')
     CSV_DATA.append(
       ",".join(
